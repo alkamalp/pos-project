@@ -237,10 +237,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         //POS-web alias
-            'Datatables' => Yajra\Datatables\Facades\Datatables::class,
-            'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
-            'PDF' => Barryvdh\DomPDF\Facade::class,
-            'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+        'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];

@@ -13,11 +13,17 @@ class BuatTabelProduk extends Migration
      */
     public function up()
     {
-        Schema::create('produk', function (Blueprint $table) {
-            $table->increments('id_produk');
-            $table->string('nama_produk');
-            $table->integer('harga_jual');
-            $table->timestamps();
+        Schema::create('produk', function(Blueprint $table){
+            $table->increments('id_produk');          
+            $table->bigInteger('kode_produk')->unsigned();           
+            $table->integer('id_kategori')->unsigned();           
+            $table->string('nama_produk', 100);           
+            $table->string('merk', 50);             
+            $table->bigInteger('harga_beli')->unsigned();         
+            $table->integer('diskon')->unsigned();             
+            $table->bigInteger('harga_jual')->unsigned();          
+            $table->integer('stok')->unsigned();      
+            $table->timestamps();         
         });
     }
 
@@ -28,6 +34,6 @@ class BuatTabelProduk extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('produk');
     }
 }
